@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import jakarta.validation.Valid;
-import med.voll.api.paciente.DadosAtualizacaoPaciente;
-import med.voll.api.paciente.DadosCadastroPaciente;
-import med.voll.api.paciente.DadosDetalhamentoPaciente;
-import med.voll.api.paciente.DadosListagemPaciente;
-import med.voll.api.paciente.Paciente;
-import med.voll.api.paciente.PacienteRepository;
+import med.voll.api.domain.paciente.DadosAtualizacaoPaciente;
+import med.voll.api.domain.paciente.DadosCadastroPaciente;
+import med.voll.api.domain.paciente.DadosDetalhamentoPaciente;
+import med.voll.api.domain.paciente.DadosListagemPaciente;
+import med.voll.api.domain.paciente.Paciente;
+import med.voll.api.domain.paciente.PacienteRepository;
 
 @RestController
 @RequestMapping("/pacientes")
@@ -65,9 +65,9 @@ public class PacienteController {
     // @DeleteMapping("/{id}")
     // @Transactional
     // public ResponseEntity excluir(@PathVariable Long id) {
-    // var paciente = repository.getReferenceById(id);
-    // paciente.excluir();
-    // return ResponseEntity.noContent().build();
+    //     var paciente = repository.getReferenceById(id);
+    //     paciente.excluir();
+    //     return ResponseEntity.noContent().build();
     // }
 
     @GetMapping("/{id}")
